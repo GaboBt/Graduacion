@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con fuegos artificiales de corazones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #401672;
+        }
+
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #000;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20px;
+            max-width: 300px;
+        }
+
+        .buttons-container-left,
+        .buttons-container-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .buttons-container-left {
+            margin-right: 40px;
+        }
+
+        .buttons-container-right {
+            margin-left: 40px;
+        }
+
+        .buttons-container button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 200px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .audio-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .audio-container audio {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FELICIDADES MI AMOR</h1>
+    <h2>ESTOY INFINITAMENTE ORGULLOSO DE TI</h2>
+
+    <div class="main-content">
+        <div class="buttons-container buttons-container-left">
+            <button onclick="openModal(1)">Fecha de nacimiento</button>
+            <button onclick="openModal(2)">Carrera</button>
+            <button onclick="openModal(3)">Signo</button>
+            <button onclick="openModal(4)">Cosas que le gustan?</button>
+        </div>
+
+        <div class="image-container">
+            <img src="imagen0.jpeg" alt="Imagen principal">
+            <p>Mi amor, hoy es un día increíble y no puedo estar más orgulloso de ti. Ver todo tu esfuerzo, dedicación y pasión finalmente recompensado es un privilegio que me llena de felicidad. Has demostrado una fortaleza y determinación inmensas, y este logro es solo el reflejo de todo lo que eres capaz de hacer. Estoy orgulloso no solo por lo que has conseguido, sino por la maravillosa persona que eres. Eres una inspiración, y no tengo dudas de que este es solo el comienzo de todos los sueños que vas a cumplir. ¡Te amo y te admiro más de lo que las palabras pueden expresar!</p>
+        </div>
+
+        <div class="buttons-container buttons-container-right">
+            <button onclick="openModal(5)">Amigos</button>
+            <button onclick="openModal(6)">Proceso</button>
+            <button onclick="openModal(7)">De mì para ti</button>
+            <button onclick="openModal(8)">Lo lograste</button>
+        </div>
+    </div>
+
+    <div class="audio-container">
+        <h3>Enjambre - Siempre Tù</h3>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- Ventanas emergentes -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(1)">&times;</span>
+            <h3>Fecha de nacimiento</h3>
+            <img src="imagen11.jpeg" alt="Imagen 1">
+            <p> 08 de marzo de 2002.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(2)">&times;</span>
+            <h3>Carrera</h3>
+            <img src="imagen2.jpeg" alt="Imagen 2">
+            <p>Licenciatura en Psicologìa.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(3)">&times;</span>
+            <h3>Signo</h3>
+            <img src="imagen3.jpeg" alt="Imagen 3">
+            <p>Piscis.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(4)">&times;</span>
+            <h3>Cosas que le gustan?</h3>
+            <img src="imagen4.jpeg" alt="Imagen 4">
+            <p>Obviamente solamente yo y el pozole >:) .</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(5)">&times;</span>
+            <h3>Amigos</h3>
+            <img src="imagen5.jpeg" alt="Imagen 5">
+            <p>Hasta este punto, creo que son las mejores amigas que te pudo dar la Uni.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(6)">&times;</span>
+            <h3>Proceso</h3>
+            <img src="imagen1.jpeg" alt="Imagen 6">
+            <p>Fue un proceso duro mi amor, se que aun te falta poquito, pero a estas alturas te creo mas que capaz de ya ser una psicologa, estuve en todo tu proceso de formacion, y por eso me atrevo a contar esto desde mi prespectiva, fueron dias de desvelos, de impotencia por ciertas cuestiones, no fue un camino facil, pero fuiste capaz de lograrlo mi amor, jamas te diste por vencida, siempre buscaste la forma de seguir adelante aunque no supieras como, pero lo hiciste y todo eso tiene su recompensa, estoy feliz y orgulloso de ver que lo lograste mi pequeña, Te amo.  .</p>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(7)">&times;</span>
+            <h3>De mì para ti</h3>
+            <img src="imagen7.jpeg" alt="Imagen 7">
+            <p>Te amo mi psicologa, me gusta aprender de ti, me gusta el que me cuentes que tanto sabes de tu carrera, me gusta el como lo explicas, el como se ve la pasiòn que tienes sobre ello, he comprendido mejor las cosas por las cosas que he aprendido de ti, no solia ver la vida de la forma en la que lo hago ahora, amo el como sabes lo que quieres y como lo quieres, me doy cuenta de lo hermosa y genuina que eres, sabes como arreglar o como hablar la vida de los demas, pero no el como llevar la tuya mi amor, y es por eso que me tienes, porque tambien un psicologo necesita desahorgarse, he tratado un poquito de sanar ese corazoncito de los problemas pasado y actuales, pero porque se escucharte y decir las palabras que quiere escuchar tu corazon, por todo lo que he aprendido de ti, eres mi gran psicologa.</p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(8)">&times;</span>
+            <h3>Lo lograste</h3>
+            <img src="imagen8.jpeg" alt="Imagen 8">
+            <p>Y como dicen "El principio, es el final", Casi a concluido el camino mi pequeña, estas cada vez mas cerca de conseguir por lo que estuviste luchando estos años, la vida te presento obstaculos que te hicieron detenerte, pero fueron obstaculo que te hicieron mas fuerte, que te hicieron ver de diferente manera la vida, me complace saber que te acompañe en todo tu proceso, y ver como lo lograste me llena de satisfaccion mi bebecita. Te amo mucho muchito.</p>
+        </div>
+    </div>
+
+    <!-- Librería canvas-confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        function openModal(modalNumber) {
+            document.getElementById('modal' + modalNumber).style.display = "block";
+        }
+
+        function closeModal(modalNumber) {
+            document.getElementById('modal' + modalNumber).style.display = "none";
+        }
+
+        // Cerrar el modal cuando se hace clic fuera del contenido
+        window.onclick = function(event) {
+            for (let i = 1; i <= 9; i++) {
+                let modal = document.getElementById('modal' + i);
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        // Función para lanzar fuegos artificiales de corazones
+        function lanzarFuegosArtificiales() {
+            var duration = 5 * 1000;  // Duración en milisegundos (5 segundos)
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+
+                // Usamos confetti pero con forma de corazones
+                confetti(Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.9), y: Math.random() - 0.2 },
+                    shapes: ['heart']
+                }));
+            }, 250);
+        }
+
+        // Llamar a la función cuando la página cargue
+        window.onload = function() {
+            lanzarFuegosArtificiales();
+        };
+    </script>
+
+</body>
+</html>
